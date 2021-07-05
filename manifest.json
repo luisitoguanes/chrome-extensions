@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "OpenWeatherMapExtension",
+    "description": "Chrome Extension for OpenWeatherMap",
+    "version": "1.0",
+    "icons": {
+        "128":"images/cloud128.png",
+        "48":"images/cloud48.png",
+        "16":"images/cloud16.png"
+    },
+    "browser_action":{
+        "default_popup":"popup.html",
+        "default_icon":"images/cloud16.png",
+        "default_title":"Extension OpenWeatherMap"
+    },
+    "permissions":[
+
+    ]
+}

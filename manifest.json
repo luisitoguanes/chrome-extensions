@@ -8,12 +8,8 @@
         "48":"images/cloud48.png",
         "16":"images/cloud16.png"
     },
-    "action":{
-        "default_popup":"popup.html",
-        "default_icon":"images/cloud16.png",
-        "default_title":"Extension OpenWeatherMap"
-    },
-    "permissions":[
-        "tabs"
-    ]
+    "action":{},
+    "chrome_url_overrides" : {
+        "newtab": "main.html"
+    }
 }

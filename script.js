@@ -30,8 +30,9 @@ function httpGet(theUrl) {
             document.getElementById('humidity').innerHTML = weatherResponse.main.humidity + " %";
             document.getElementById('loadingSpinner').style.display = "none";
             document.getElementById('resultList').style.display = "block";
-        } else {
-            // TODO show message "check if api key is valid"
+        } else if (xmlHttp.readyState == 2 && xmlHttp.status == 401) {
+            document.getElementById('loadingSpinner').style.display = "none";
+            document.getElementById('errorMessage').style.display = "block";
         }
     }
     xmlHttp.open("GET", theUrl, true);
@@ -44,6 +45,7 @@ function saveApiKey(){
     if(document.getElementById('rememberMe').checked == true || value === ""){
         chrome.storage.local.set({weatherApiKey: value}, function() {    
             document.getElementById('loadingSpinner').style.display = "block";
+            document.getElementById('resultList').style.display = "none";
             console.log('Value is set to ' + value);
         });
     }
@@ -51,7 +53,13 @@ function saveApiKey(){
     updateScreen();
 }
 
+function removeApiKey(){
+    document.getElementById('errorMessage').style.display = "none";
+    document.getElementById('apiKey').value = '';
+    saveApiKey();
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('sbmt').addEventListener('click', saveApiKey);
-    document.getElementById('logout').addEventListener('click', saveApiKey);
+    document.getElementById('logout').addEventListener('click', removeApiKey);
 });

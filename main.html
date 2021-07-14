@@ -12,6 +12,8 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/css/floating-labels.css" rel="stylesheet">
+    <!-- Simple loading animation -->
+    <link href="/css/loading.css" rel="stylesheet">
 </head>
 
 <body>
@@ -32,12 +34,42 @@
         <button id='sbmt' class="btn btn-lg btn-primary btn-block" type="button">GO</button>
         <p class="mt-5 mb-3 text-muted text-center">© Luis Guanes - 2021</p>
     </form>
+
     <div class="text-center mb-4" id="infoPanel" style="display: none;">
-        <h1>OpenWeatherMap Extension</h1>
-        <p>Date: <span id="todaysDate"></span></p>
-        <p>Temperature: <span id="temp"></span></p>
-        <p>Pressure: <span id="pressure"></span></p>
-        <p>Humidity: <span id="humidity"></span></p>
+        <div class="text-center mb-4">
+            <img class="mb-4" src="/images/cloud128.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">OpenWeatherMap <br> Extension</h1>
+        </div>
+        <div class="loader" id="loadingSpinner">Loading...</div>
+        <ul class="list-group mb-3" id="resultList" style="display: none;">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0 text-left">Date</h6>
+            </div>
+            <span class="text-muted" id="todaysDate"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0 text-left">Temperature</h6>
+              <small class="text-muted">Metric: Celsius.</small>
+            </div>
+            <span id="temp" class="text-muted"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0 text-left">Pressure</h6>
+              <small class="text-muted">Atmospheric pressure (on the sea level, if there is no sea_level or grnd_level data), hPa.</small>
+            </div>
+            <span id="pressure" class="text-muted"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0 text-left">Humidity</h6>
+              <small class="text-muted">Humidity, %.</small>
+            </div>
+            <span id="humidity" class="text-muted"></span>
+          </li>
+        </ul>
         <button id='logout' class="btn btn-lg btn-primary btn-block" type="submit">Logout</button>
     </div>
     <script type="text/javascript" src="script.js"></script>

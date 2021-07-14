@@ -27,7 +27,9 @@ function httpGet(theUrl) {
             let weatherResponse = JSON.parse(xmlHttp.responseText);
             document.getElementById('temp').innerHTML = weatherResponse.main.temp + "°C";
             document.getElementById('pressure').innerHTML = weatherResponse.main.pressure + " hPa";
-            document.getElementById('humidity').innerHTML = weatherResponse.main.humidity + " %";        
+            document.getElementById('humidity').innerHTML = weatherResponse.main.humidity + " %";
+            document.getElementById('loadingSpinner').style.display = "none";
+            document.getElementById('resultList').style.display = "block";
         } else {
             // TODO show message "check if api key is valid"
         }
@@ -41,6 +43,7 @@ function saveApiKey(){
     
     if(document.getElementById('rememberMe').checked == true || value === ""){
         chrome.storage.local.set({weatherApiKey: value}, function() {    
+            document.getElementById('loadingSpinner').style.display = "block";
             console.log('Value is set to ' + value);
         });
     }

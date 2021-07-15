@@ -115,15 +115,15 @@ Project Link: [https://github.com/luisitoguanes/chrome-extensions](https://githu
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/luisitoguanes/chrome-extensions.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/luisitoguanes/chrome-extensions.svg
 [contributors-url]: https://github.com/luisitoguanes/chrome-extensions/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/luisitoguanes/chrome-extensions.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/luisitoguanes/chrome-extensions.svg
 [forks-url]: https://github.com/luisitoguanes/chrome-extensions/network/members
-[stars-shield]: https://img.shields.io/github/stars/luisitoguanes/chrome-extensions.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/luisitoguanes/chrome-extensions.svg
 [stars-url]: https://github.com/luisitoguanes/chrome-extensions/stargazers
-[issues-shield]: https://img.shields.io/github/issues/luisitoguanes/chrome-extensions.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/luisitoguanes/chrome-extensions.svg
 [issues-url]: https://github.com/luisitoguanes/chrome-extensions/issues
-[license-shield]: https://img.shields.io/github/license/luisitoguanes/chrome-extensions.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/luisitoguanes/chrome-extensions.svg
 [license-url]: https://github.com/luisitoguanes/chrome-extensions/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/luis-guanes-73a11160/

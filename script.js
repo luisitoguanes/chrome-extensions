@@ -11,7 +11,7 @@ function updateScreen() {
         document.getElementById('configPanel').style.display = "none";
     
         var date = new Date();
-        document.getElementById('todaysDate').innerHTML = date.toLocaleDateString();
+        document.getElementById('todaysDate').innerHTML = date.toLocaleDateString() + " " + date.toLocaleTimeString();
         const url='https://api.openweathermap.org/data/2.5/weather?id=3439389&appid=' + openWeatherKey + '&units=metric';
         httpGet(url);
     } else {
